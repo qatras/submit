@@ -36,7 +36,7 @@
   <body>
     <div class="container">
       <div class="form-container">
-        <h4 class="text-center mb-4">Personal Details</h4>
+        <h4 class="text-center mb-4">Mobile Technician  Details</h4>
         <form id="submit-to-google-sheet">
           <div class="form-group">
             <label for="name">Name:</label>
@@ -127,7 +127,7 @@
         const formData = new FormData(form);
 
         const oman = document.getElementById("oman").checked;
-        const ex = document.getElementById("ex").checked;
+        //const ex = document.getElementById("ex").checked;
 
         // Collect all selected languages
         const languages = Array.from(document.querySelectorAll('input[name="language"]:checked'))
@@ -136,7 +136,7 @@
         formData.append("languages", languages);
 
         formData.append("oman", oman ? "Yes" : "No");
-        formData.append("ex", ex ? "Yes" : "No");
+       //formData.append("ex", ex ? "Yes" : "No");
 
         fetch(scriptURL, { method: "POST", body: formData })
           .then(() => {
